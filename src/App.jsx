@@ -1,9 +1,12 @@
 import "./App.css";
+import Hero from "./components/Hero";
+import Navbar from "./components/Navbar";
 
 function App() {
   return (
     <>
-      <h1>Airbnb clone</h1>
+      <Navbar />
+      <Hero />
     </>
   );
 }
