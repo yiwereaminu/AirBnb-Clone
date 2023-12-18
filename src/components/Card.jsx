@@ -11,11 +11,11 @@ export default function Card(props) {
         <div className="rating-location">
           <img src="images/Star 1-1.png" alt="star" className="star"></img>
           <span> {props.rating} </span>
-          <span className="gray">{props.reviewCount} .</span>
+          <span className="gray">({props.reviewCount}) .</span>
           <span className="gray">{props.country}</span>
         </div>
         <div className="card-details">
-          <p>Life lessons with Katie zafares</p>
+          <p>{props.title}</p>
           <p>
             <b>From ${props.price}</b> /person
           </p>
@@ -31,4 +31,5 @@ Card.propTypes = {
   reviewCount: PropTypes.number.isRequired,
   country: PropTypes.string.isRequired,
   price: PropTypes.number.isRequired,
+  title: PropTypes.string.isRequired,
 };
