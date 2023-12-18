@@ -70,11 +70,17 @@ body {
 }
 
 /* card */
+.gray {
+  color: #918e9b;
+  margin-left: 0.2rem;
+}
 
 .parent-card {
   /* display: flex;
   flex-direction: column;
   justify-content: start; */
+  max-width: 176px;
+  max-height: 235px;
   margin: 0 28%;
   margin-top: 2.5rem;
 }
@@ -86,8 +92,7 @@ body {
 }
 
 .card-image {
-  max-width: 176px;
-  max-height: 235px;
+  width: 100%;
 }
 .rating-location {
   display: flex;
