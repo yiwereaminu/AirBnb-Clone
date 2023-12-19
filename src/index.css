@@ -70,29 +70,34 @@ body {
 }
 
 /* card */
+.card-list {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 20px;
+  overflow-x: auto;
+  justify-content: center;
+}
 .gray {
   color: #918e9b;
   margin-left: 0.2rem;
 }
 
 .parent-card {
-  /* display: flex;
-  flex-direction: column;
-  justify-content: start; */
   max-width: 176px;
   max-height: 235px;
-  margin: 0 28%;
-  margin-top: 2.5rem;
+  /* margin: 0 28%; */
+  padding: 2.5rem 0;
 }
 .card {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: flex-start;
-  margin: 0 auto;
 }
 
 .card-image {
   width: 100%;
+  border-radius: 10px;
 }
 .rating-location {
   display: flex;
