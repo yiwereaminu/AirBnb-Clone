@@ -83,12 +83,13 @@ body {
 }
 
 .parent-card {
+}
+.card {
   max-width: 176px;
   max-height: 235px;
   /* margin: 0 28%; */
   padding: 2.5rem 0;
-}
-.card {
+  flex: 0 0 auto; /* ADD */
   display: flex;
   flex-direction: column;
   justify-content: center;

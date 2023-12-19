@@ -9,13 +9,7 @@ function App() {
     return (
       <Card
         key={element.id} // Add a unique "key" prop
-        img={element.coverImg}
-        title={element.title}
-        reviewCount={element.stats.reviewCount}
-        rating={element.stats.rating}
-        location={element.location}
-        price={element.price}
-        openSpots={element.openSpots}
+        item={element}
       />
     );
   });
