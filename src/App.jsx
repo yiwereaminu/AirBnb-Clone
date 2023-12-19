@@ -13,8 +13,9 @@ function App() {
         title={element.title}
         reviewCount={element.stats.reviewCount}
         rating={element.stats.rating}
-        country={element.location}
+        location={element.location}
         price={element.price}
+        openSpots={element.openSpots}
       />
     );
   });

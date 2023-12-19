@@ -1,8 +1,13 @@
 import PropTypes from "prop-types"; // Import PropTypes
 export default function Card(props) {
+  let badgeText;
+  if (props.openSpots === 0) badgeText = "SOLD OUT";
+  else if (props.location === "Online") badgeText = "ONLINE";
+
   return (
     <div className="parent-card">
       <div className="card">
+        {badgeText && <div className="card-badge">{badgeText}</div>}
         <img
           src={props.img}
           className="card-image"
@@ -12,7 +17,7 @@ export default function Card(props) {
           <img src="images/Star 1-1.png" alt="star" className="star"></img>
           <span> {props.rating} </span>
           <span className="gray">({props.reviewCount}) .</span>
-          <span className="gray">{props.country}</span>
+          <span className="gray">{props.location}</span>
         </div>
         <div className="card-details">
           <p>{props.title}</p>
@@ -29,7 +34,8 @@ Card.propTypes = {
   img: PropTypes.string.isRequired,
   rating: PropTypes.string.isRequired,
   reviewCount: PropTypes.number.isRequired,
-  country: PropTypes.string.isRequired,
+  location: PropTypes.string.isRequired,
   price: PropTypes.number.isRequired,
   title: PropTypes.string.isRequired,
+  openSpots: PropTypes.number.isRequired,
 };
